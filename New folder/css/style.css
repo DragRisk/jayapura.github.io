@@ -1,0 +1,403 @@
+:root {
+  --merah: #6c0606e0;
+  --hitam: #1a0707;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-align: none;
+}
+
+/* html */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--hitam);
+  color: #fff;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 2px solid var(--merah);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--merah);
+}
+.navbar .navbar-navigasi a {
+  color: aqua;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-navigasi a:hover {
+  color: chartreuse;
+}
+
+.navbar .navbar-navigasi a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--merah);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-navigasi a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--merah);
+}
+
+#ham-menu {
+  display: none;
+}
+
+/* hero section */
+.hoho {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/saya-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* gradasi */
+.hoho::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(213, 205, 205, 0) 50%
+  );
+}
+.hoho .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hoho .content h1 {
+  font-size: 5rem;
+  color: aqua;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1;
+}
+.hoho .content h1 span {
+  color: var(--merah);
+}
+.hoho .content p {
+  color: #000000;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.hoho .content .abc {
+  color: rgb(15, 171, 188);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background-color: #000000;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.hoho .content a:hover {
+  color: #fff;
+}
+
+/* about */
+.about,
+.hehe,
+.kontak {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.hehe h2,
+.kontak h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.about h2 span,
+.hehe h2 span,
+.kontak h2 span {
+  color: var(--merah);
+}
+.about .oke {
+  display: flex;
+}
+.about .oke .about-img {
+  flex: 1 1 45rem;
+}
+.about .oke .about-img img {
+  width: 100%;
+}
+.about .oke .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .oke .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about .oke .content p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* menu */
+.hehe h2,
+.kontak h2 {
+  margin-bottom: 1rem;
+}
+.hehe p,
+.kontak p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.hehe .hehe2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.hehe .hehe2 .jas {
+  text-align: center;
+}
+
+.hehe .hehe2 .jas .jas-img {
+  border-radius: 50%;
+  height: 40%;
+  /* width: 50%; */
+}
+
+.hehe .hehe2 .jas .jas-tittle {
+  margin: 1rem auto 0.5rem;
+}
+
+.hehe .hehe2 .jas .jas-harga {
+  background-color: #b7b109;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  padding: 0.5rem 4%;
+  display: inline-block;
+}
+.hehe .hehe2 .jas a:hover {
+  color: aquamarine;
+}
+
+/* kontak */
+.kontak .oke3 {
+  display: flex;
+  margin-top: 2.5rem;
+  background-color: #000000;
+}
+
+.kontak .oke3 .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kontak .oke3 form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.kontak .oke3 form .inputg {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  border-color: var(--hitam);
+  border: 1px solid #eee;
+  padding-left: 1rem;
+}
+
+.kontak .oke3 form .inputg input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #4108ff;
+}
+.kontak .oke3 form .hub {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #4108ff;
+  background-color: var(--merah);
+  cursor: progress;
+}
+
+/* footer */
+
+footer {
+  background: #05013b;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .sosmed {
+  padding: 1rem 0;
+}
+footer .sosmed a {
+  margin: 2rem;
+  color: #8e1111;
+}
+
+footer .sosmed a:hover {
+  color: #fff;
+}
+
+footer .linkk a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .linkk a:hover {
+  color: #000000;
+}
+
+footer .credit p {
+  color: aqua;
+}
+footer .credit a {
+  color: #0873b6;
+  font-weight: 600;
+}
+/* media querish */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  #ham-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-navigasi {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-navigasi.active {
+    right: 0;
+  }
+
+  .navbar .navbar-navigasi a {
+    color: var(--hitam);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.8rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-navigasi a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-navigasi a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .oke {
+    flex-wrap: wrap;
+  }
+  .about .oke .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .oke .content {
+    padding: 0;
+  }
+  .about .oke .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .oke .content p {
+    font-size: 1.6rem;
+  }
+
+  .hehe p {
+    font-size: 1.5rem;
+  }
+
+  .kontak .oke3 {
+    flex-wrap: wrap;
+  }
+  .kontak .oke3 .map {
+    height: 25rem;
+  }
+
+  .kontak .oke3 form {
+    padding-top: 2rem;
+  }
+}
+
+/* handphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
